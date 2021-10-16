@@ -1,5 +1,5 @@
 module "dial-relay" {
-  source = "git::https://github.com/dialchain/deployment/tree/main/module/azure/aci"
+  source = "git::https://github.com/dialchain/deployment.git//module/azure/aci"
   prefix = var.prefix
   container-name = var.container-name
   container-image = lower(var.container-image)
