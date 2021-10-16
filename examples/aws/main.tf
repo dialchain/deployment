@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "dial-relay" {
-  source = "..\/..\/..\/terraform-module\/aws\/ecs"
+  source = "git::https://github.com/dialchain/deployment/tree/main/module/aws/ecs"
   prefix = var.prefix
   container-name = var.container-name
   container-image = lower(var.container-image)
