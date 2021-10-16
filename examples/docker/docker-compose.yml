@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  dial-relay:
+    image: "public.ecr.aws/s6b0c4h3/dial-relay:latest"
+    ports:
+      - "9092:9092"
+volumes:
+  logvolume01: {}
