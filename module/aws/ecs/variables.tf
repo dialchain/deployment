@@ -26,6 +26,6 @@ variable "host-port" {
 }
 
 variable "environment" {
-  type = list(any)
+  type    = list(any)
   default = []
 }

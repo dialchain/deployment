@@ -3,7 +3,7 @@ variable "region" {
 }
 
 variable "project_id" {
-  default = "example"
+  default     = "example"
   description = "The ID of the project where this VPC will be created"
 }
 
@@ -19,16 +19,16 @@ variable "container-image" {
 variable "ports" {
   description = "container ports configuration"
   type        = map(any)
-  default     = {
-    port      = "9092"
-    protocol  = "TCP"
+  default = {
+    port     = "9092"
+    protocol = "TCP"
   }
 }
 
 variable "environment_variables" {
   description = "Container environment variables"
   type        = map(any)
-  default     = {
-    APP_PORT  = "9092"
+  default = {
+    APP_PORT = "9092"
   }
 }

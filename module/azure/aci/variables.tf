@@ -14,23 +14,23 @@ variable "container-name" {
 
 variable "container-image" {
   description = "Container image"
-  default = "public.ecr.aws/s6b0c4h3/dial-relay:latest"
+  default     = "public.ecr.aws/s6b0c4h3/dial-relay:latest"
 }
 
 variable "environment_variables" {
   description = "Container environment variables"
   type        = map(any)
-  default     = {
-    APP_PORT  = "9092"
+  default = {
+    APP_PORT = "9092"
   }
 }
 
 variable "ports" {
   description = "container ports configuration"
   type        = map(any)
-  default     = {
-    port      = "80"
-    protocol  = "TCP"
+  default = {
+    port     = "80"
+    protocol = "TCP"
   }
 }
 

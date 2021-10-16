@@ -29,7 +29,7 @@ variable "environment" {
   type = list(any)
   default = [
     {
-      name = "APP_PORT",
+      name  = "APP_PORT",
       value = "9092"
     }
   ]

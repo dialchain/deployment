@@ -1,4 +1,4 @@
-data "aws_caller_identity" "current" {}
+//data "aws_caller_identity" "current" {}
 
 locals {
   region    = var.region
@@ -28,7 +28,7 @@ resource "aws_ecs_task_definition" "this" {
           "logDriver": "awslogs",
           "options": {
             "awslogs-group": "${local.log_group}",
-            "awslogs-region": "us-east-1",
+            "awslogs-region": "${local.region}",
             "awslogs-stream-prefix": "/aws/ecs"
           }
         },

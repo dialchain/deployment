@@ -3,13 +3,13 @@ provider "aws" {
 }
 
 module "dial-relay" {
-  source = "git::https://github.com/dialchain/deployment.git//module/aws/ecs"
-  prefix = var.prefix
-  container-name = var.container-name
+  source          = "git::https://github.com/dialchain/deployment.git//module/aws/ecs"
+  prefix          = var.prefix
+  container-name  = var.container-name
   container-image = lower(var.container-image)
-  stage_name = var.stage_name
+  stage_name      = var.stage_name
   //  environment = var.environment
-  container-port  = var.container-port
-  host-port = var.host-port
-  region = var.region
+  container-port = var.container-port
+  host-port      = var.host-port
+  region         = var.region
 }

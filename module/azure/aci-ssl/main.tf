@@ -13,7 +13,7 @@ resource "azurerm_storage_account" "this" {
 }
 
 resource "azurerm_storage_share" "aci_caddy" {
-  name = "${local.name}-caddy-data"
+  name                 = "${local.name}-caddy-data"
   storage_account_name = azurerm_storage_account.this.name
 }
 
@@ -26,16 +26,16 @@ resource "azurerm_container_group" "this" {
   ip_address_type     = "public"
   exposed_port = [
     {
-      port = "9092"
+      port     = "9092"
       protocol = "TCP"
     }
   ]
 
   container {
-    name   = var.container-name
-    image  = var.container-image
-    cpu    = "0.5"
-    memory = "1.5"
+    name                  = var.container-name
+    image                 = var.container-image
+    cpu                   = "0.5"
+    memory                = "1.5"
     environment_variables = var.environment_variables
 
     ports {

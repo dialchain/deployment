@@ -12,16 +12,16 @@ resource "azurerm_container_group" "this" {
   ip_address_type     = "public"
   exposed_port = [
     {
-      port = "9092"
+      port     = "9092"
       protocol = "TCP"
     }
   ]
 
   container {
-    name   = var.container-name
-    image  = var.container-image
-    cpu    = "0.5"
-    memory = "1.5"
+    name                  = var.container-name
+    image                 = var.container-image
+    cpu                   = "0.5"
+    memory                = "1.5"
     environment_variables = var.environment_variables
 
     ports {
@@ -30,9 +30,9 @@ resource "azurerm_container_group" "this" {
     }
 
     volume {
-      name = "${lower(var.prefix)}-container"
+      name       = "${lower(var.prefix)}-container"
       mount_path = "/home/"
-      empty_dir = true
+      empty_dir  = true
     }
   }
 

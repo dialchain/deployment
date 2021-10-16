@@ -5,7 +5,7 @@ resource "random_pet" "name" {
 }
 
 locals {
-  name         = "${lower(var.prefix)}-${random_pet.name.id}"
+  name = "${lower(var.prefix)}-${random_pet.name.id}"
   default-tags = merge(
     { "terraform.io" = "managed" },
     { "Name" = local.name },

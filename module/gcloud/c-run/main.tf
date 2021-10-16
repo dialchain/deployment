@@ -12,7 +12,7 @@ resource "google_cloud_run_service" "this" {
           container_port = var.ports.port
         }
         env {
-          name = "APP_PORT"
+          name  = "APP_PORT"
           value = "9092"
         }
       }
@@ -35,9 +35,9 @@ data "google_iam_policy" "noauth" {
 }
 
 resource "google_cloud_run_service_iam_policy" "noauth" {
-  location    = google_cloud_run_service.this.location
-  project     = google_cloud_run_service.this.project
-  service     = google_cloud_run_service.this.name
+  location = google_cloud_run_service.this.location
+  project  = google_cloud_run_service.this.project
+  service  = google_cloud_run_service.this.name
 
   policy_data = data.google_iam_policy.noauth.policy_data
 }
