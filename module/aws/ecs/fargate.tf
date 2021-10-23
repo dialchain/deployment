@@ -1,7 +1,7 @@
-//data "aws_caller_identity" "current" {}
+data "aws_region" "current" {}
 
 locals {
-  region    = var.region
+  region    = data.aws_region.current.name
   log_group = aws_cloudwatch_log_group.this.name
 }
 
