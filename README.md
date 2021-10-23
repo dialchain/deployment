@@ -1,6 +1,6 @@
 # deployment
 
-##Prerequisites
+## Prerequisites
 In order to follow this tutorial, you should be familiar with the usual awscli and Terraform plan/apply workflow. 
 
 If you're new to Terraform, refer first to the [Terraform Getting Started tutorial](https://learn.hashicorp.com/collections/terraform/aws-get-started)
