@@ -1,22 +1,45 @@
 # Getting started
 
-## Mac
+## Prerequisites
+Before start setting please make sure you have create your aws account before
 
+## Using AWS console
+1. login into your aws account and move to ec2 folder
+![](image-3.png)
+
+2. select AMI Catalog and search fro mondial wallet ami ( eu-central-1: ami-09fb61f3816d06b93, eu-west-1: ami-01aa2dd4544976943, us-east-1: ami-047db6a2c490cbdab, us-east-2: ami-094629b9dcb88a9d5 )
+![](image-4.png)
+
+3. Select the AMI and click on launch with AMI
+![](image-5.png)
+
+4. filled in the necessary information to start the instance and launch it
+![](image-6.png)
+![](image-7.png)
+![](image-8.png)
+
+5. Wait for the app to be ready and check if they are up <br>
+Dial-data
+![](image-9.png)
+Dial-relay
+![](image-10.png)
+
+## Using AWSCLI (WIP...)
 ## Step1: Prepare your system
 
 1. Install terraform `brew install terraform && terraform --version`
-1. Download and install the AWS cli
-1. Create a user in your aws console  with the `AdministratorAccess` policy. The user have an `Access key ID` and a `Secret access key`
-1. Configure your computer's awscli to be able to authenticate on aws. Use the previously generated `Access key ID` and `Secret access key`
-1. Test `aws s3 ls`. If well configured, it should list your s3 bucket content.
+2. Download and install the AWS cli
+3. Create a user in your aws console  with the `AdministratorAccess` policy. The user have an `Access key ID` and a `Secret access key`
+4. Configure your computer's awscli to be able to authenticate on aws. Use the previously generated `Access key ID` and `Secret access key`
+5. Test `aws s3 ls`. If well configured, it should list your s3 bucket content.
 
 
 ## Step2: Start the deployment
 
 ### Terraform init
 1. If not already done, clone this repository
-1. Step into the aws folder`$cd deployment/examples/aws`
-1. Run `$terraform init`. This command will clone the project and down load all the terraform required modules. If executed sucessfuly you should get a message `Terraform has been successfully initialized!`
+2. Step into the aws folder`$cd deployment/examples/aws`
+3. Run `$terraform init`. This command will clone the project and down load all the terraform required modules. If executed sucessfuly you should get a message `Terraform has been successfully initialized!`
 
 ### Update properties
 
